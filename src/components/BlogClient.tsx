@@ -39,7 +39,7 @@ const BlogClient = ({
             ./logs/insights.log
           </div>
           <div className="flex items-center gap-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-white bg-[#00aa00] terminal-glow">
+            <h2 className="text-2xl md:text-4xl font-bold text-white bg-[#00aa00] terminal-glow">
               {showAll ? "ALL_ARCHIVES" : "LATEST_INSIGHTS"}
             </h2>
 
@@ -218,22 +218,7 @@ const BlogClient = ({
             </span>
           </div>
         </motion.div>
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="text-center mt-16 mb-8 text-[#00aa00] text-xs"
-        >
-          <div className="mb-2">[ "WHAT", "WHY","HOW", section]</div>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-[#00ff00]"
-          >
-            ▼
-          </motion.div>
-        </motion.div>
+       
       </div>
     </section>
   );

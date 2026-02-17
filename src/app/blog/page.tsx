@@ -28,7 +28,7 @@ export default function BlogPage() {
                 </nav>
 
                 <BlogClient posts={posts} showAll={true} />
-            </div>
+            </div> 
 
             <FloatingBlogButton />
             <FloatingWhatsappButton />
