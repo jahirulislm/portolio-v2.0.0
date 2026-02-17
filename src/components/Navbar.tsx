@@ -13,6 +13,7 @@ const Navbar = () => {
 
   // Check if animation has already played this session
   const [shouldAnimate] = useState(() => {
+    if (typeof window === "undefined") return false;
     const hasAnimated = sessionStorage.getItem("navbarAnimated");
     if (!hasAnimated) {
       sessionStorage.setItem("navbarAnimated", "true");
