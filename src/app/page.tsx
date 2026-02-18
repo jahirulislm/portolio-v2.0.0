@@ -34,7 +34,7 @@ export default function Home() {
         <Projects />
         {/* <Skills /> */}
         {/* <Blog /> */}
-        <DigitalGoods />
+        {/* <DigitalGoods /> */}
         <Process />
         <Contact />
         <ReadyToShip />
