@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ+Basic+Guides&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -5,6 +6,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
+  --font-inloader: 'Playwrite NZ Basic Guides', 'Hind Siliguri', cursive;
+  --font-hind: 'Hind Siliguri', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-terminal-green: #00ff00;
@@ -98,6 +101,12 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+
+/* Font from cdn */
+.font-InLoader {
+  font-family: 'Playwrite NZ Basic Guides', 'Hind Siliguri', cursive;
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -188,7 +197,7 @@ body {
 } */
 
 /* Screen flicker animation */
-@keyframes flicker {
+/* @keyframes flicker {
   0%,
   19.999%,
   22%,
@@ -208,10 +217,11 @@ body {
   69.999% {
     opacity: 0.4;
   }
-}
+} */
 
 /* Blink cursor animation */
 @keyframes blink {
+
   0%,
   50% {
     opacity: 1;
@@ -229,6 +239,7 @@ body {
 
 /* Rotating letter animation for JAHIR (single position) */
 @keyframes letter-rotate {
+
   0%,
   20% {
     opacity: 1;
@@ -377,11 +388,9 @@ body {
 .matrix-bg {
   background:
     radial-gradient(ellipse at top, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(
-      ellipse at bottom,
+    radial-gradient(ellipse at bottom,
       rgba(0, 170, 0, 0.05) 0%,
-      transparent 50%
-    );
+      transparent 50%);
 }
 
 /* Hover effects for terminal elements */
@@ -400,6 +409,7 @@ body {
 }
 
 @keyframes pulse-glow {
+
   0%,
   100% {
     box-shadow: 0 0 5px #00ff00;
@@ -687,6 +697,7 @@ textarea:focus {
 
 /* ASCII Art Glow Pulse */
 @keyframes ascii-glow-pulse {
+
   0%,
   100% {
     text-shadow:
@@ -721,7 +732,7 @@ textarea:focus {
 
 @layer base {
   * {
-    @apply outline-ring/50;
+    @apply border-border outline-ring/50;
   }
 
   body {
@@ -785,16 +796,12 @@ textarea:focus {
 
   .bg-grid-lines {
     background-image:
-      linear-gradient(
-        to right,
+      linear-gradient(to right,
         var(--color-terminal-green) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        to bottom,
+        transparent 1px),
+      linear-gradient(to bottom,
         var(--color-terminal-green) 1px,
-        transparent 1px
-      );
+        transparent 1px);
     background-size: 8px 8px;
   }
 }

@@ -11,6 +11,7 @@ import ReadyToShip from "@/components/ReadyToShip";
 import ScrollTop from "@/components/ScrollTop";
 import FloatingBlogButton from "@/components/FloatingBlogButton";
 import FloatingWhatsappButton from "@/components/FloatingWhatsappButton";
+import PulseRingLoader from "@/components/PulseRingLoader";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         suppressHydrationWarning
       />
 
+      <PulseRingLoader />
+
       <Navbar />
       <div className="max-w-5xl mx-auto relative z-8">
         <Hero />
@@ -31,7 +34,7 @@ export default function Home() {
         <Projects />
         {/* <Skills /> */}
         {/* <Blog /> */}
-        {/* <DigitalGoods /> */}
+        <DigitalGoods />
         <Process />
         <Contact />
         <ReadyToShip />
